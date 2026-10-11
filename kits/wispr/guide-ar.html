@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wispr Flow على الماوس</title>
+<style>
+  :root {
+    --navy: #2D4769; --body: #3d556e; --muted: #8EA3B5; --line: #C5D2E0;
+    --card: #ffffff; --bg: #F0F2F5; --accent: #8B5CF6; --code-bg: #F0F2F5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --navy: #c9d6e6; --body: #b3c2d3; --muted: #7d8fa3; --line: #2c3a4c;
+      --card: #16202d; --bg: #0e1620; --accent: #a78bfa; --code-bg: #0e1620;
+    }
+  }
+  :root[data-theme="dark"] {
+    --navy: #c9d6e6; --body: #b3c2d3; --muted: #7d8fa3; --line: #2c3a4c;
+    --card: #16202d; --bg: #0e1620; --accent: #a78bfa; --code-bg: #0e1620;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--body);
+    font-family: Tahoma, "Segoe UI", Arial, sans-serif; font-size: 17px; line-height: 1.8;
+    letter-spacing: 0;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 28px 16px 48px; }
+  h1 { color: var(--navy); font-size: 26px; line-height: 1.4; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 22px; }
+  section {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 20px; margin: 0 0 14px; break-inside: avoid;
+  }
+  h2 { color: var(--navy); font-size: 19px; margin: 0 0 8px; display: flex; gap: 10px; align-items: center; }
+  .n {
+    flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: var(--card);
+    font-size: 15px; display: inline-flex; align-items: center; justify-content: center;
+  }
+  ol, ul { margin: 0; padding-inline-start: 22px; }
+  li { margin: 2px 0; }
+  code, .ltr {
+    direction: ltr; unicode-bidi: isolate; font-family: Consolas, "Courier New", monospace;
+    font-size: 15px; background: var(--code-bg); border: 1px solid var(--line); border-radius: 6px;
+    padding: 0 6px; white-space: nowrap;
+  }
+  .map { width: 100%; border-collapse: collapse; margin: 4px 0 0; }
+  .map td { border-top: 1px solid var(--line); padding: 8px 4px; vertical-align: top; }
+  .map tr:first-child td { border-top: 0; }
+  .map td:first-child { color: var(--navy); font-weight: bold; width: 42%; }
+  a { color: var(--accent); }
+  .dl {
+    display: inline-block; margin-top: 6px; padding: 8px 16px; border-radius: 8px;
+    background: var(--navy); color: var(--card); text-decoration: none; font-weight: bold;
+  }
+  .note { color: var(--muted); font-size: 15px; }
+  footer { color: var(--muted); font-size: 14px; text-align: center; margin-top: 18px; }
+  @media print {
+    body { background: #fff; color: #222; font-size: 13px; }
+    main { padding: 0; max-width: none; }
+    section { border-color: #bbb; padding: 10px 14px; margin-bottom: 8px; }
+    .dl { background: none; color: #222; padding: 0; border: 0; }
+    .dl::after { content: " (ParSec-Wispr-Mouse.zip)"; font-weight: normal; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Wispr Flow على الماوس</h1>
+  <p class="sub">إعدادات ParSec الجاهزة. ويندوز 10 أو 11، وماوس فيه زرارين على الجنب.</p>
+
+  <section>
+    <h2>الزراير بتعمل إيه</h2>
+    <table class="map">
+      <tr><td>الزرار الجانبي اللي ورا</td><td>امسكه واتكلم. سيبه، الكلام ينزل مكتوب.</td></tr>
+      <tr><td>الزرار الجانبي التاني</td><td>يبعت الرسالة (Enter).</td></tr>
+      <tr><td>برّه خانة الكتابة</td><td>الزرارين بيرجعوا لشغلهم العادي: رجوع وقدّام.</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="n">1</span>نزّل Wispr Flow</h2>
+    <ol>
+      <li>ادخل <a href="https://wisprflow.ai">wisprflow.ai</a> ونزّل نسخة ويندوز.</li>
+      <li>اعمل حساب. الخطة المجانية كفاية تبدأ بيها.</li>
+      <li>سيب اختصار الكلام زي ما هو: <code>Ctrl + Win</code></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="n">2</span>نزّل الإعدادات</h2>
+    <ol>
+      <li>نزّل الملف: <a class="dl" href="ParSec-Wispr-Mouse.zip" download>تحميل الإعدادات</a></li>
+      <li>كليك يمين على الملف، واختار Extract All.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="n">3</span>التركيب</h2>
+    <ol>
+      <li>افتح الفولدر ودوس دبل كليك على <code>install.cmd</code></li>
+      <li>لو ظهرت رسالة زرقا "Windows protected your PC": اضغط More info وبعدين Run anyway.</li>
+      <li>هيتسطّب AutoHotkey لو مش موجود. ده برنامج مجاني بيقرا زراير الماوس.</li>
+      <li>أيقونة H خضرا جنب الساعة = شغال. وبيشتغل لوحده كل ما تفتح الجهاز.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2><span class="n">4</span>جرّب</h2>
+    <ol>
+      <li>افتح أي شات (ChatGPT أو Claude أو واتساب) واضغط جوه خانة الكتابة.</li>
+      <li>امسك الزرار اللي ورا وقول جملة، وسيبه.</li>
+      <li>اضغط الزرار التاني، الرسالة تتبعت.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>تغيير الزراير</h2>
+    <ol>
+      <li>اكتب <code>%LOCALAPPDATA%\ParSec-Wispr-Mouse</code> في شريط العنوان بتاع أي فولدر واضغط Enter.</li>
+      <li>افتح <code>wispr-mouse.ahk</code> بالـ Notepad.</li>
+      <li>في أول الملف:
+        <ul>
+          <li><code>TALK_BUTTON</code> زرار الكلام، و <code>SEND_BUTTON</code> زرار الإرسال.</li>
+          <li>عشان تبدّلهم، بدّل <code>XButton1</code> و <code>XButton2</code></li>
+          <li><code>MButton</code> = ضغطة العجلة.</li>
+          <li><code>SEND_KEYS := "^{Enter}"</code> لو الشات بيبعت بـ Ctrl + Enter.</li>
+          <li><code>SMART_MODE := false</code> لو عايز الزراير تكلّم Wispr في أي مكان.</li>
+          <li>لو غيّرت اختصار Wispr، اكتبه في <code>WISPR_KEYS</code></li>
+        </ul>
+      </li>
+      <li>احفظ، وكليك يمين على أيقونة H واختار Reload Script.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>إلغاء التركيب</h2>
+    <ol>
+      <li>دبل كليك على <code>uninstall.cmd</code> من نفس الفولدر.</li>
+      <li>الزراير ترجع زي ما كانت. AutoHotkey بيفضل متسطّب، ولو مش عايزه شيله من Settings ثم Apps.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>لو حاجة مش شغالة</h2>
+    <ul>
+      <li>الزرار بيعمل رجوع وأنا جوه خانة الكتابة: خلّي <code>SMART_MODE := false</code></li>
+      <li>مفيش كلام بينزل: اتأكد إن Wispr Flow مفتوح، وإن اختصاره <code>Ctrl + Win</code></li>
+      <li>Wispr فضل يسمع بعد ما سبت الزرار: اضغط الزرار ضغطة كمان.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>الأمان</h2>
+    <ul>
+      <li>الملفات مفتوحة، تقدر تقراها في Notepad قبل ما تسطّب.</li>
+      <li>السكريبت مش بيكلّم الإنترنت، ومش بيسجّل حاجة، ومش بيكتب ملفات.</li>
+      <li class="note">الإنترنت بيتستخدم مرة واحدة وقت التركيب، عشان ينزّل AutoHotkey لو مش موجود.</li>
+    </ul>
+  </section>
+
+  <footer>ParSec · instagram.com/parsec.solutions</footer>
+</main>
+</body>
+</html>
